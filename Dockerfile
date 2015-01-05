@@ -11,7 +11,7 @@ RUN apt-get -y install tar wget
 ENV TEAMCITY_VERSION 9.0.1
 ENV TEAMCITY_PACKAGE TeamCity-$TEAMCITY_VERSION.tar.gz
 RUN echo $TEAMCITY_PACKAGE
-ENV TEAMCITY_DOWNLOAD http://download.jetbrains.com/teamcity/
+ENV TEAMCITY_DOWNLOAD http://download-cf.jetbrains.com/teamcity
 RUN wget -qO- $TEAMCITY_DOWNLOAD/$TEAMCITY_PACKAGE | tar xz -C /opt
 
 EXPOSE 8181
